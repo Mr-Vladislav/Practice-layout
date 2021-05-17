@@ -65,25 +65,38 @@ function nodeCreate(list, crawl, idForm, crawlRight, crawlLeft) {
                                 <input type="text" class="number-of-items" value=1>
                                 <span class="glyphicon glyphicon-plus add-item"></span>
                             </div>
-                                <button class="add-to-cart"><span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</button>
+                                <button class="add-to-cart">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    <span class="add-to-cart-add">Add to cart</span>
+                                </button>
                         </div>
                     </div> `
 
         crawl.insertAdjacentHTML("beforeend", markup);
-        document.querySelector(`#img${idForm}${i + 1}`).style.height = '130px';
-        document.querySelector(`#img${idForm}${i + 1}`).style.width = '260px';
         document.querySelector(`#img${idForm}${i + 1}`).style.backgroundImage = `url(${item.imgPath})`;
-        document.querySelector(`#img${idForm}${i + 1}`).style.backgroundSize = "260px 130px"
+       
 
     })
 
     //go right
-
+    
     let num = 1;
+    document.querySelector((`#${idForm}${num + 1}`)).classList.add('margin-tablet');
+
+    document.querySelector((`#${idForm}${num + 1}`)).classList.add('margin-desktop');
+    document.querySelector((`#${idForm}${num + 2}`)).classList.add('margin-desktop-right');
+
     crawlRight.addEventListener('click', function () {
         if (num< list.length) {
-            document.querySelector(`#${idForm}${num}`).style.display = "none";
+            document.querySelector(`#${idForm}${num}`).style.display = "none";          
             num++;
+            document.querySelector((`#${idForm}${num}`)).classList.remove('margin-tablet');
+            document.querySelector((`#${idForm}${num + 1}`)).classList.add('margin-tablet');
+
+            document.querySelector((`#${idForm}${num}`)).classList.remove('margin-desktop');
+            document.querySelector((`#${idForm}${num + 1}`)).classList.remove('margin-desktop-right');
+            document.querySelector((`#${idForm}${num + 1}`)).classList.add('margin-desktop');
+            document.querySelector((`#${idForm}${num + 2}`)).classList.add('margin-desktop-right');
         }
     });
 
@@ -93,6 +106,13 @@ function nodeCreate(list, crawl, idForm, crawlRight, crawlLeft) {
         if (num > 1) {
             document.querySelector(`#${idForm}${num - 1}`).style.display = "block";
             num--;
+            document.querySelector((`#${idForm}${num+1}`)).classList.add('margin-tablet');
+            document.querySelector((`#${idForm}${num + 2}`)).classList.remove('margin-tablet');
+            
+            document.querySelector((`#${idForm}${num + 2}`)).classList.remove('margin-desktop');
+            document.querySelector((`#${idForm}${num + 1}`)).classList.add('margin-desktop');
+            document.querySelector((`#${idForm}${num + 2}`)).classList.add('margin-desktop-right');
+            document.querySelector((`#${idForm}${num + 3}`)).classList.remove('margin-desktop-right');
         }
     })
 }

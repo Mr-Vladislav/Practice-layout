@@ -25,19 +25,31 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body> 
-        <div class="MVP-header"> 
+        <div class="MVP-header clearfix"> 
             <div class="MVP-header-left"> 
                 <span class="glyphicon glyphicon-menu-hamburger"></span> 
                 <span class="MVP-header-left-name">Menu</span> 
             </div>
+            <div class="MVP-header-desktop">
+                <div class="MVP-header-desktop-logo">
+                    <img src="images/Logo.png" alt="SKF logo" class="MVP-header-desktop-logo-img"> 
+                    <span class="MVP-header-desktop-logo-text">Imarketplace</span>
+                </div> 
+                <div class="MVP-header-desktop-links">
+                    <a href="#"><div class="MVP-header-desktop-links-link">Bearings and Units</div></a>
+                    <a href="#"><div class="MVP-header-desktop-links-link">Maintenance Products</div></a>
+                    <a href="#"><div class="MVP-header-desktop-links-link">Power Transmission</div></a>
+                    <a href="#"><div class="MVP-header-desktop-links-link-seal">Seals</div></a>
+                </div>
+            </div>
             <div class="MVP-header-right"> 
                 <div class="cart"> 
-                    <span class="cart-icon glyphicon glyphicon-shopping-cart"></span> 
-                    <span class="cart-name">Cart</span> 
+                    <div class="cart-icon glyphicon glyphicon-shopping-cart"></div> 
+                    <div class="cart-name">Cart</div>
                 </div> 
                 <div class="login"> 
-                    <span class="glyphicon glyphicon-user login-icon"></span> 
-                    <span class="login-name">Login</span> 
+                    <div class="glyphicon glyphicon-user login-icon"></div> 
+                    <div class="login-name">Account</div> 
                 </div> 
             </div> 
         </div> 
@@ -45,7 +57,7 @@
         <div class="search"> 
             <h1>Purchase industrial <br> SKF products online</h1> 
             <div class="search-bar"> 
-                <div class="search-bar-input">Search</div> 
+                <div class="search-bar-input">Search <span class="search-bar-input-hidden">by designation code</span></div> 
                 <button class="search-bar-btn">
                     <span class="glyphicon glyphicon-search"></span>
                 </button> 
@@ -212,32 +224,36 @@
         <section class="categories clearfix"> 
             <h2>Product categories</h2> 
             <div class="categories-all"> 
-                <div class="categories-all-categorie"> 
-                    <div class="categories-all-categorie-img-bearings"></div> 
-                    <div class="categories-all-categorie-desc"> 
-                        <h3>Bearings and Units</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <div class="categories-all-top">
+                    <div class="categories-all-top-categorie-bearings"> 
+                        <div class="categories-all-top-categorie-bearings-img"></div> 
+                        <div class="categories-all-top-categorie-bearings-desc"> 
+                            <h3>Bearings and Units</h3> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                        </div> 
                     </div> 
-                </div> 
-                <div class="products-categorie"> 
-                    <div class="categories-all-categorie-img-maintenance"></div> 
-                    <div class="categories-all-categorie-desc"> 
-                        <h3>Maintenance Products</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                    <div class="categories-all-top-categorie-maintenance"> 
+                        <div class="categories-all-top-categorie-maintenance-img"></div> 
+                        <div class="categories-all-top-categorie-maintenance-desc"> 
+                            <h3>Maintenance Products</h3> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                        </div> 
                     </div> 
-                </div> 
-                <div class="products-categorie"> 
-                    <div class="categories-all-categorie-img-transmission"></div> 
-                    <div class="categories-all-categorie-desc"> 
-                        <h3>Power Transmission</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                </div>
+                <div class="categories-all-bottom">
+                    <div class="categories-all-bottom-categorie-transmission"> 
+                        <div class="categories-all-bottom-categorie-transmission-img"></div>
+                        <div class="categories-all-bottom-categorie-transmission-desc"> 
+                            <h3>Power Transmission</h3> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                        </div> 
                     </div> 
-                </div> 
-                <div class="products-categorie"> 
-                    <div class="categories-all-categorie-img-seals"></div> 
-                    <div class="categories-all-categorie-desc"> 
-                        <h3>Seals</h3> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                    <div class="categories-all-bottom-categorie-seals"> 
+                        <div class="categories-all-bottom-categorie-seals-img"></div> 
+                        <div class="categories-all-bottom-categorie-seals-desc"> 
+                            <h3>Seals</h3> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                         </div> 
                     </div> 
                 </div> 
             </div> 
@@ -247,14 +263,14 @@
             <div class="quality-assurance-content"> 
                 <h2>Quality assurance</h2> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros sem, placerat sed turpis mattis, varius dignissim nunc. Ut feugiat odio at bibendum efficitur. Nulla nec viverra risus. Suspendisse cursus libero vel mi blandit, quis ultricies est hendrerit. Donec efficitur, massa ac efficitur ullamcorper, sapien ligula viverra libero, id hendrerit massa nisl in elit. Nulla fringilla feugiat nisi, ac gravida ligula sodales non. Quisque at dolor ullamcorper, scelerisque sapien nec, iaculis nibh. Sed tempor semper leo, vel pretium neque ultrices ut. Cras tellus urna, suscipit eget cursus eu, maximus ut elit. In metus mi, interdum in quam quis, iaculis suscipit urna. In vestibulum, ligula et blandit luctus, ex lorem semper diam, quis mattis eros nunc id ligula. 
-                    <button class="learn-more-btn quality-assurance-btn">Learn More &rightarrow;</button> 
+                    <button class="learn-more-btn quality-assurance-btn"><span class="learn-more-btn-text">Learn More </span><span class="learn-more-btn-arrow">&rightarrow;</span></button> 
                 </p> 
             </div> 
         </section> 
-        <img src="images/Overlaper.png" alt="bearings" class="overlaping-bearings"> 
+       <div class="overlaping-bearings"></div>  
         
         <section class="clearfix crawler maint"> 
-            <h2>Maintenance products best selers</h2> 
+            <h2>Maintenance products best sellers</h2> 
             <div class="crawler-crawl maintenance-crawl"> 
                 <span class="glyphicon glyphicon-menu-left glyphicon-round maint-left"></span> 
                 <span class="glyphicon glyphicon-menu-right glyphicon-round maint-right"></span> 
